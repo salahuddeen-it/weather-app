@@ -1,0 +1,81 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/background.jpg");
+
+}
+
+
+/* Animated Nature Background */
+
+
+/* Smooth Zoom Animation */
+
+@keyframes zoomEffect{
+
+  from{
+    transform: scale(1);
+  }
+
+  to{
+    transform: scale(1.1);
+  }
+
+}
+
+/* Glassmorphism Card */
+
+.container{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+input{
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+button{
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#weatherResult{
+  margin-top: 20px;
+}
+
+.rain{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background-image:
+  url("images/rain-drops.png");
+
+  animation: rainFall 0.5s linear infinite;
+}
+
+@keyframes rainFall{
+
+  from{
+    background-position: 0 0;
+  }
+
+  to{
+    background-position: 20% 100%;
+  }
+}
