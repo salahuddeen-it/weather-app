@@ -119,7 +119,7 @@ else if(condition === "Clouds"){
   icon = "☁️";
 
   document.body.style.backgroundImage =
-  "url('images/cloud.AVIF')";
+  "url('images/cloud.jpg')";
 
 }
 
