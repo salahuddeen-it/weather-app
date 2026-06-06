@@ -177,3 +177,40 @@ music.addEventListener("ended", function(){
   }
 
 });
+
+// For Background Audio //
+window.addEventListener("load", () => {
+
+  const music =
+  document.getElementById("bgMusic");
+
+  music.volume = 1;
+
+  music.play();
+
+});
+document.body.addEventListener("click", () => {
+
+  const music =
+  document.getElementById("bgMusic");
+
+  music.play();
+
+});
+
+// Current Date & Time
+function updateDateTime(){
+
+  const now = new Date();
+
+  const date = now.toLocaleDateString();
+
+  const time = now.toLocaleTimeString();
+
+  document.getElementById("dateTime").innerHTML =
+  `${date} | ${time}`;
+
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
