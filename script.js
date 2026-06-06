@@ -89,6 +89,7 @@ function displayWeather(data){
   console.log(description);
 
   let icon = "";
+    let music = document.getElementById("weatherMusic");
 
     // background Change Code
     // Thunderstorm FIRST (priority)
@@ -96,6 +97,8 @@ if (description.includes("thunderstorm")) {
   icon = "⛈️🌩️";
       document.body.style.backgroundImage =
   "url('images/thunderstorm.gif')";
+      music.src = "music/thunderstorm.mp3";
+  music.play();
     }
 
 
@@ -104,6 +107,8 @@ else if(description.includes("Snow")){
 
   document.body.style.backgroundImage =
   "url('images/snow.gif')";
+    music.src = "music/snow.mp3";
+  music.play();
 
 }
 
@@ -112,6 +117,8 @@ else if(condition === "Rain"){
 
   document.body.style.backgroundImage =
   "url('images/raine.gif')";
+    music.src = "music/rain.mp3";
+      music.play();
 
 }
 
@@ -120,6 +127,8 @@ else if(condition === "Clouds"){
 
   document.body.style.backgroundImage =
   "url('images/cloud.jpg')";
+    music.src = "music/clear.mp3";
+      music.play();
 
 }
 
@@ -128,6 +137,8 @@ else if(condition === "Clear"){
 
   document.body.style.backgroundImage =
   "url('images/sunny.jpg')";
+    music.src = "music/clear-sky.mp3";
+    music.play();
 
 }
 
@@ -135,6 +146,8 @@ else{
 
   document.body.style.backgroundImage =
   "url('images/background.jpg')";
+    music.src = "music/birds.mp3";
+  music.play();
 
 }
   result.innerHTML = `
@@ -147,3 +160,20 @@ else{
   `;
 
 }
+
+let music =
+document.getElementById("weatherMusic");
+
+let count = 0;
+
+music.addEventListener("ended", function(){
+
+  count++;
+
+  if(count < 2){
+
+    music.play();
+
+  }
+
+});
