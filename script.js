@@ -121,7 +121,7 @@ else if(condition === "Rain"){
   document.body.style.backgroundImage =
   "url('images/rain.gif')";
 
-    music.src = "music/rain.mp3";
+    music.src = "music/rain.mpeg";
       music.play();
 
 }
